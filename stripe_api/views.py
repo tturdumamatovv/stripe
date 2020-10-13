@@ -10,6 +10,12 @@ from stripe_api.models import Item, Order
 stripe.api_key = STRIPE_API_KEY
 
 
+def index(request):
+    """Return cons text for / path"""
+    return HttpResponse(
+        "django server is running, check https://github.com/Neafiol/Django-Stripe-Api for more information")
+
+
 def buy_router(request: WSGIRequest, item_id: int) -> JsonResponse:
     """
     Generate stripe session ID for purchase
@@ -44,7 +50,7 @@ def buy_router(request: WSGIRequest, item_id: int) -> JsonResponse:
     return JsonResponse({'session_id': session.id})
 
 
-def order_new_router(request:WSGIRequest)->JsonResponse:
+def order_new_router(request: WSGIRequest) -> JsonResponse:
     """
     Create new order object in database
 
@@ -55,7 +61,7 @@ def order_new_router(request:WSGIRequest)->JsonResponse:
     return JsonResponse({'order_id': order.id})
 
 
-def order_buy_router(request:WSGIRequest, order_id:int)->JsonResponse:
+def order_buy_router(request: WSGIRequest, order_id: int) -> JsonResponse:
     """
     Generate stripe session ID for order's purchase
 

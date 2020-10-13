@@ -16,8 +16,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from stripe_api.views import buy_router, item_router, order_new_router, order_buy_router, order_put_router
+from stripe_api.views import buy_router, item_router, order_new_router, order_buy_router, order_put_router, index
+
 urlpatterns = [
+    path('', index),
     path('admin/', admin.site.urls),
     path('buy/<item_id>', buy_router),
     path('item/<item_id>', item_router),

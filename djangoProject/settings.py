@@ -26,7 +26,7 @@ SECRET_KEY = '8ibqwzdn3#sbpzpfr_=$$apth1l3s*g21!bu8%fpy6i(@+np36'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["sw.neafiol.site"]
 
 # Application definition
 
