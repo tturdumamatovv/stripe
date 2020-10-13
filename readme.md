@@ -13,7 +13,7 @@
 
 * Использование `environment variables`
 
-* Просмотр Django Моделей в Django Admin панели - __доступно по адресу `sw.neafiol.site:8000/admin`__
+* Просмотр Django Моделей в Django Admin панели - __доступно по адресу `sw.neafiol.site:8000/admin` user: `admin`, pass: `admin`__
 
 * Запуск приложения на удаленном сервере, доступном для тестирования - __запущенно на `sw.neafiol.site:8000`__
 
@@ -30,3 +30,13 @@ python3 -m venv ./venv
 pip3 install -r requirements.txt
 python3 manage.py runserver 0.0.0.0:8000
 ```
+
+Сервис
+----------------------------
+* `/` - index
+* `admin/` - Админка admin.site.urls
+* `buy/<item_id>` - купить товар
+* `item/<item_id>` - страница товара
+* `order/buy/<order_id>` - купить заказ
+* `order/put/<order_id>` - добавить товар в заказ
+* `order/new/` - создать заказ
