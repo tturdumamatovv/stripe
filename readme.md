@@ -23,7 +23,10 @@
 Запуск
 ----
 ```
-python3 -m venv ./
-pip install -r requirements.txt
+apt-get install python3-venv git
+
+git clone https://github.com/Neafiol/Django-Stripe-Api
+python3 -m venv ./venv
+pip3 install -r requirements.txt
 python manage.py runserver 0.0.0.0:8000
 ```
