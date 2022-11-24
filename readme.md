@@ -25,7 +25,7 @@
 ```
 apt-get install python3-venv git
 
-git clone https://github.com/Neafiol/Django-Stripe-Api
+git clone https://github.com/Neafiol/stripe
 python3 -m venv ./venv
 pip3 install -r requirements.txt
 python3 manage.py runserver 0.0.0.0:8000
